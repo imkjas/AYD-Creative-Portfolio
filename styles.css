@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Wrapper*/
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/*Main Container*/
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  display: flex;
+  z-index: 5;
+
+  /* Background Image */
+  background-image: url("./images/bg/cover.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Left and Right Halves (For Tear Effect) */
+.left-half,
+.right-half {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease-in-out;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+/* Logo and Sub-header */
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logo {
+  width: 150px;
+}
+
+.sub-header {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/*About Me Section (Initially Hidden, Appears After Click) */
+.about-me {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/bg/black.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1; /* Lower than .container initially */
+}
