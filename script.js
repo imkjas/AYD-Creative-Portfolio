@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlayContent = document.querySelector(".overlay-content");
   const aboutMe = document.querySelector(".about-me");
 
-  let isClicked = false; // Prevent multiple triggers
+  let isClicked = false;
 
   container.addEventListener("click", function () {
-    if (isClicked) return; // Stop if already clicked
+    if (isClicked) return;
     isClicked = true;
 
     // Move the halves outward (tear effect)
@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fade out the logo and text
     overlayContent.style.opacity = "0";
 
-    // Wait for the tear animation to finish before showing About Me
+    // Wait for the animation, then show About Me
     setTimeout(() => {
       aboutMe.style.opacity = "1";
       aboutMe.style.zIndex = "10"; // Bring About Me to front
     }, 1000);
 
-    // Disable further clicks
-    container.style.pointerEvents = "none";
+    // Enable scrolling
+    document.querySelector(".wrapper").style.overflowY = "auto";
   });
 });
