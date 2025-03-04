@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+  background-image: url("../images/bg/black.png");
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+  overflow: hidden;
+}
+.proj-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+
+.project-header {
+  width: 110%;
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  border: 0.5rem solid #490206;
+  margin-top: -0.5rem;
+}
+.left {
+  transform: skew(-20deg);
+}
+
+.project-title {
+  transform: skew(20deg);
+  text-align: right;
+  padding-inline: 12%;
+}
+.project-header-right {
+  width: 110%;
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  border: 0.5rem solid #490206;
+  margin-bottom: -0.5rem;
+  margin-left: -12%;
+  transform: skew(-20deg);
+}
+.right {
+  text-align: left;
+}
+.project-title h1 {
+  padding-top: clamp(20px, 5vh, 50px);
+  font-size: clamp(32px, 4vw, 3.7rem);
+  -webkit-text-fill-color: #490206;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+.project-title h2 {
+  font-size: clamp(32px, 4vw, 2.2rem);
+  font-weight: 200;
+  padding-bottom: clamp(20px, 5vh, 50px);
+}
+.proj-description {
+  margin-top: 2rem;
+  text-align: justify;
+  color: #a6a6a6;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  font-size: clamp(15px, 4vw, 1.5rem);
+}
+.project1-images {
+  margin-top: clamp(40px, 10vh, 70px);
+  margin-bottom: clamp(40px, 10vh, 70px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: min(30px, 2vw);
+}
+.project1-images img {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 50% 20% 25%;
+  gap: 10px;
+}
+
+.proj-skills {
+  grid-column: 3;
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+}
+.skill {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* This ensures it remains square */
+}
+.span {
+  grid-column: span 2;
+}

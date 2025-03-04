@@ -12,7 +12,7 @@ html {
   align-items: center; /* Center vertically */
   min-height: 100vh; /* Ensure it takes full screen height */
   font-size: 16px;
-  background-image: url("./images/bg/black.png");
+  background-image: url("../images/bg/black.png");
 }
 
 a{
@@ -49,7 +49,7 @@ a{
 .container {
   font-family: "Bebas Neue", sans-serif;
   z-index: 5; /* Stays on top until clicked */
-  background-image: url("./images/bg/cover.png");
+  background-image: url("../images/bg/cover.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,16 +62,19 @@ a{
   position: absolute;
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   transition: transform 1s ease-in-out;
 }
 
 .left-half {
+  opacity: 50%;
+  background: radial-gradient(circle at center right, #24272a 0, #1c1f23 20%,#14181d 40%,#13161b 60%, #0f1217 80%, black 100%);
   left: 0;
 }
 
 .right-half {
+  opacity: 50%;
   right: 0;
+  background: radial-gradient(circle at center left, #24272a 0, #1c1f23 20%,#14181d 40%,#13161b 60%, #0f1217 80%, black 100%);
 }
 
 /* 🔥 Fix Logo & Sub-header Centering */
@@ -151,7 +154,7 @@ a{
   position: relative; /* Ensure it takes up space in the document */
   background-color: black;
   color: white;
-  background-image: url(./images/bg/black.png);
+  background-image: url(../images/bg/black.png);
   font-family: 'Bebas Neue' , sans-serif;
   width: 100%;
   min-height: 100vh;
@@ -201,9 +204,8 @@ a{
 .project-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
   padding: 50px;
-  gap: min(30px 2vw);
+  gap: min(30px, 2vw);
 }
 
 .project-list img {
