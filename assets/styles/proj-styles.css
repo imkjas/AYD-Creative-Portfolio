@@ -37,56 +37,57 @@ a {
   gap: 10%;
 }
 
+.proj-description {
+  font-family: Poppins, sans-serif;
+  color: #a6a6a6;
+  font-size: clamp(15px, 4vw, 1.5rem);
+  text-align: justify;
+  margin-top: 2rem;
+}
+.proj-description.four {
+  font-size: clamp(15px, 4vw, 1.2rem);
+}
+
 .project-header {
   width: 110%;
-  font-family: "Bebas Neue", sans-serif;
-  color: white;
   border: 0.5rem solid #490206;
-  margin-top: -0.5rem;
-}
-.left {
   transform: skew(-20deg);
+  margin-top: -0.5rem;
 }
 
 .project-title {
-  transform: skew(20deg);
-  text-align: right;
+  font-family: "Bebas Neue", sans-serif;
   padding-inline: 12%;
 }
-.project-header-right {
-  width: 110%;
-  font-family: "Bebas Neue", sans-serif;
-  color: white;
-  border: 0.5rem solid #490206;
-  margin-bottom: -0.5rem;
-  margin-left: -12%;
-  transform: skew(-20deg);
+
+.left .project-title {
+  transform: skew(20deg);
+  text-align: right;
 }
-.right {
-  text-align: left;
+
+.right .project-title {
+  transform: skew(20deg);
+  text-align: right;
 }
+
 .project-title h1 {
   padding-top: clamp(20px, 5vh, 50px);
   font-size: clamp(32px, 4vw, 3.7rem);
-  -webkit-text-fill-color: #490206;
   -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-fill-color: #490206;
   font-weight: 300;
   letter-spacing: 0.1rem;
 }
+
 .project-title h2 {
+  color: white;
   font-size: clamp(32px, 4vw, 2.2rem);
   font-weight: 200;
   padding-bottom: clamp(20px, 5vh, 50px);
+  letter-spacing: 1px;
 }
-.proj-description {
-  margin-top: 2rem;
-  text-align: justify;
-  color: #a6a6a6;
-  font-family: Poppins, sans-serif;
-  font-size: 1.2rem;
-  font-size: clamp(15px, 4vw, 1.5rem);
-}
+
 .project1-images {
   margin-top: clamp(40px, 10vh, 70px);
   margin-bottom: clamp(40px, 10vh, 70px);
@@ -101,20 +102,26 @@ a {
 
 .bottom {
   display: grid;
-  grid-template-columns: 50% 20% 25%;
+  grid-template-columns: 50% 50%;
   gap: 10px;
+  margin-left: -21%;
 }
 
 .proj-skills {
-  grid-column: 3;
+  justify-content: flex-end;
   display: flex;
   flex-direction: row;
-  gap: 15%;
+  gap: 2rem;
 }
 .skill {
-  width: 50%;
+  width: clamp(100px, 15vw, 200px);
   height: auto;
   aspect-ratio: 1 / 1; /* This ensures it remains square */
+}
+.skill.four {
+  width: clamp(80px, 15vw, 150px);
+  aspect-ratio: 1080 / 1350;
+  object-fit: contain;
 }
 .span {
   grid-column: span 2;
